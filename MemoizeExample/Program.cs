@@ -5,7 +5,7 @@ using MemoizeExample.Services;
 namespace MemoizeExample {
 	internal class Program {
 		static async Task Main( string[] args ) {
-			var function = new Function {
+			var function = new StepFunction {
 				Id = "my-func",
 				Event = "foo",
 				Func = async step => {

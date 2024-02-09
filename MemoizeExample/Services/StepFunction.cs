@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using MemoizeExample.Models;
 
 namespace MemoizeExample.Services {
-	public class Function {
+	public class StepFunction {
 		public required string Id { get; init; }
 
 		public required string Event { get; init; }
