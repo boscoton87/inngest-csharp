@@ -17,7 +17,7 @@ namespace MemoizeExample {
 						async () => Console.WriteLine( $"Hello, {name}" ) );
 				}
 			};
-			await function.RunFunction();
+			await function.Run();
 		}
 	}
 }

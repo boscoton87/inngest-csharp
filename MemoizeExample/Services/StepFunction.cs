@@ -10,7 +10,7 @@ namespace MemoizeExample.Services {
 
 		public required Func<Step, Task> Func { private get; init; }
 
-		public async Task RunFunction() {
+		public async Task Run() {
 			var step = new Step();
 			while ( true ) {
 				try {
