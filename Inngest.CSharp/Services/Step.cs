@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using MemoizeExample.Models;
+using Inngest.CSharp.Models;
 
-namespace MemoizeExample.Services {
+namespace Inngest.CSharp.Services {
 	public class Step {
 		private readonly Dictionary<string, object> _cache = new();
 

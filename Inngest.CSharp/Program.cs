@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using MemoizeExample.Models;
-using MemoizeExample.Services;
+using Inngest.CSharp.Models;
+using Inngest.CSharp.Services;
 
-namespace MemoizeExample {
+namespace Inngest.CSharp {
 	internal class Program {
 		static async Task Main( string[] args ) {
 			await SimpleExample();

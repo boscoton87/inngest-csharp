@@ -1,5 +1,5 @@
 ﻿using System;
 
-namespace MemoizeExample.Models {
+namespace Inngest.CSharp.Models {
 	public class StepControlException : Exception { }
 }

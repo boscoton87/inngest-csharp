@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using MemoizeExample.Models;
+using Inngest.CSharp.Models;
 
-namespace MemoizeExample.Services {
+namespace Inngest.CSharp.Services {
 	public class StepFunction {
 		public required string Id { get; init; }
 
