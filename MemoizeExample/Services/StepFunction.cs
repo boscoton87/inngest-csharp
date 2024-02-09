@@ -15,7 +15,7 @@ namespace MemoizeExample.Services {
 			while ( true ) {
 				try {
 					await Func( step );
-				} catch ( ValueMemoizedException ) {
+				} catch ( StepControlException ) {
 					continue;
 				}
 				break;

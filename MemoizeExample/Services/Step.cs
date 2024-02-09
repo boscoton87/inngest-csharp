@@ -12,8 +12,12 @@ namespace MemoizeExample.Services {
 				return ( TOut ) value;
 			}
 			// TODO: Phone home to server
-			_cache.Add( stepName, await func() );
-			throw new ValueMemoizedException();
+			try {
+				_cache.Add( stepName, await func() );
+			} catch ( Exception e ) {
+				throw new StepCallbackException( e );
+			}
+			throw new StepControlException();
 		}
 
 		public async Task Run( string stepName, Func<Task> func ) {
@@ -21,9 +25,13 @@ namespace MemoizeExample.Services {
 				return;
 			}
 			// TODO: Phone home to server
-			await func();
-			_cache.Add( stepName, null );
-			throw new ValueMemoizedException();
+			try {
+				await func();
+				_cache.Add( stepName, null );
+			} catch ( Exception e ) {
+				throw new StepCallbackException( e );
+			}
+			throw new StepControlException();
 		}
 	}
 }
