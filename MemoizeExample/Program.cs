@@ -9,8 +9,12 @@ namespace MemoizeExample {
 				Id = "my-func",
 				Event = "foo",
 				Func = async step => {
-					var name = await step.Run( "get-name", async () => "Alex" );
-					await step.Run( "print-name", async () => Console.WriteLine($"Hello, {name}") );
+					var name = await step.Run(
+						"get-name",
+						async () => "Alex" );
+					await step.Run(
+						"print-name",
+						async () => Console.WriteLine( $"Hello, {name}" ) );
 				}
 			};
 			await function.RunFunction();
